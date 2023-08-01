@@ -1,0 +1,424 @@
+/* Start Global */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: somar;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* End Global */
+/* start my framework */
+.clear-fix{
+    clear: both;
+}
+/* end my framework */
+/* navbar style starts */
+.navbar{
+    background-color: #f8f9fa;
+    padding: 2px 0;
+    box-shadow: 5px 3px 15px rgba(0, 0, 0, .3);
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+.navbar .brand{
+    width: 50%;
+    text-align: end;
+    height: 100%;
+}
+.navbar .brand img{
+    width: 40px;
+}
+.navbar .links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+.navbar .links li a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+}
+.navbar .links li a:hover,.navbar .links li.active a{
+    border-bottom: 2px solid #0f75bc;
+    color: #0f75bc;
+}
+/* navbar style ends */
+.cards{
+    overflow: hidden;
+}
+.card-a4,.card-a3,.card-a2,.card-a1,.new-drills .card,.section-header,.section-header2,.section-header3,.card2{
+    opacity: 0;
+}
+.section-header ~ div .line{
+    opacity: 0;
+}
+.section-header ~ div .line.animate__animated{
+    opacity: 1;
+}
+.animate__animated{
+    opacity: 1;
+}
+
+.row-md-3
+.higth-100v{
+    height: calc(100vh - 53.2px)!important;
+    overflow: hidden;
+}
+.row-g2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+}
+.line{
+    width: 150px;
+    border: 2px solid #0f75bc;
+    border-radius: 10px;
+}
+.cart{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    position: relative;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.top-25{
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 34px);
+}
+/* latest activites section starts */
+.section_blue{
+    background-color: #0f75bc;
+    width: 100%;
+    height: 200px;
+}
+.cont{
+    position: relative;
+    top: -170px;
+}
+
+.section3-cards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px 40px;
+    overflow: hidden;
+}
+.card2{
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.card2 .img_container{
+    background-size: cover;
+}
+/* latest activites section ends */
+.slider{
+    background: white;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 100px;
+    overflow: hidden;
+}
+.slider .slide img{
+    width: 100px ;
+}
+
+
+.slider .slide-track {
+    transition: all 200ms linear;
+    display: inline-block;
+    animation: move 20s linear infinite;
+    white-space: nowrap;
+}
+
+.slider .slide-track>* {
+    padding: 2vw;
+    display: inline-block;
+}
+.slider::before,
+.slider::after {
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+@keyframes move {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
+}
+
+/* infinite slider ends */
+/* footer section starts */
+.end_section{
+    width: 100%;
+    background-color:#0f75bc;
+    font-size: 24px;
+}
+
+.contact_form form input,.contact_form form textarea{
+padding: 8px;
+margin: 5px 0;
+}
+.contact_form form input[placeholder="الاسم"]{
+    width: 28%;
+    margin-left: 1%;
+}
+.contact_form form input[placeholder="البريد الالكتروني"]{
+    width: 68%;
+    margin-right: 1%;
+}
+
+/* footer section ends */
+
+/* activitis style starts */
+.section2 .cont select,.section2 .cont input{
+    background-color: #f8f8f87c;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    height: 36px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.583);
+}
+
+.section2 .cont .search_icon{
+    position: absolute;
+    /* left: -50px; */
+    padding: 10px 10px 0 0;
+    z-index: 1000;
+}
+.row-md-2{
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 10px;
+}
+.row-md-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px 5px;
+}
+.section2 .card{
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 0;
+    overflow: hidden;
+}
+.section2 .card .card_image{
+    border-radius: 15px 15px 0 0 !important;
+    width: 100%;
+    height: 234px;
+    background-size: cover;
+}
+/* activitis style ends */
+/* about section style starts */
+.custom-shape-divider-bottom-1678985102 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1678985102 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom-1678985102 .shape-fill {
+    fill: #0F75BC;
+}
+.ws-30{
+    word-spacing: 30px;
+}
+.bg-blue{
+    background-color: #0F75BC;
+}
+/* about section style ends */
+/* login page style starts */
+/* .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+form.login{
+    position: absolute;
+    background-color: white;
+    border-radius: 14px;
+    z-index: 10;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+form.login h1{
+    color: #4aa8de;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+form.login h1 span{
+    color: #ff00cc;
+}
+.input-box{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.input-box input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px 0 ;
+    margin-top: 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    z-index: 10;
+}
+.input-box span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1.7rem;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05rem;
+    transition: 0.5s;
+}
+.input-box input:valid ~ span,
+.input-box input:focus ~ span{
+    color: #4aa8de;
+    transform: translateY(-30px);
+    font-size: 1.5rem;
+}
+.input-box i{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0F75BC;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+.input-box input:valid ~ i,
+.input-box input:focus ~ i
+{
+    height: 44px;
+    background: #0F75BC;
+}
+.submit-btn{
+    display: block;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(to left,#ff00cc , #4aa8de);
+    border-radius: 10px;
+    padding: 7px 50px;
+    margin: 3rem auto 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+
+
+}
+.submit-btn:hover{
+    background: linear-gradient(to left , #4aa8de,#ff00cc);
+
+}
+/* login page style starts */
+
+@media (max-width:768px) {
+    .navbar .brand{
+        width: 20%;
+    }
+    .navbar .links{
+        width: 80%;
+    }
+    .row-g2{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .higth-100v{
+        height: inherit !important;
+    }
+    .section3-cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contact_form form textarea{
+        height: 200px;
+    }
+    .row-md-2{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .row-md-2 h2{
+        text-align: center;
+    }
+    .section2 .cont select,.section2 .cont input{
+        height: 30px;
+    }
+    .row-md-3{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:576px){
+    .row-g2{
+        grid-template-columns:repeat(1,1fr);
+        gap: 20px;
+    }
+    .row-md-3{
+        grid-template-columns: repeat(1,1fr);
+        padding: 10px;
+    }
+}
